@@ -10,7 +10,9 @@ class id(apie.Endpoint):
         this.clobberContent = False
 
         this.requiredKWArgs.append('os')
+        this.requiredKWArgs.append('machine')
         this.requiredKWArgs.append('arch')
+        this.requiredKWArgs.append('processor')
         this.requiredKWArgs.append('version')
 
         this.optionalKWArgs['hostname'] = 'localhost'
@@ -24,7 +26,9 @@ Get a unique identifier for the given hardware.
     def Call(this):
         numericIdSegments = {
             'os': 0,
+            'machine': 0,
             'arch': 0,
+            'processor': 0,
             'version': 0,
             'hostname': 0
         }
