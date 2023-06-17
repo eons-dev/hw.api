@@ -6,6 +6,7 @@ class hw(apie.Endpoint):
         super().__init__(name)
 
         this.supportedMethods = [] #All
+        this.allowedNext.append('id')
 
     # Required Endpoint method. See that class for details.
     def GetHelpText(this):
