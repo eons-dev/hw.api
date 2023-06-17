@@ -6,6 +6,7 @@ class id(apie.Endpoint):
         super().__init__(name)
 
         this.supportedMethods = ['GET']
+        this.cacheable = True
 
         this.requiredKWArgs.append('os')
         this.requiredKWArgs.append('machine')
