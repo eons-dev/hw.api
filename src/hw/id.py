@@ -6,8 +6,6 @@ class id(apie.Endpoint):
         super().__init__(name)
 
         this.supportedMethods = ['GET']
-        this.mime = 'plain/text'
-        this.clobberContent = False
 
         this.requiredKWArgs.append('os')
         this.requiredKWArgs.append('machine')
@@ -34,4 +32,4 @@ Get a unique identifier for the given hardware.
         }
         #TODO...
         this.response.code = 200
-        this.response.content.string = "".join([str(s) for s in numericIdSegments.values()])
+        this.response.content.data = numericIdSegments
