@@ -4,7 +4,7 @@ next:
 	build: publish
 	build_in: package
 	copy:
-	- /inc: package/
+	- /src: package/
 	config:
 		clear_build_path: false
 		visibility: public
